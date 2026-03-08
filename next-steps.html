@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>職涯準備地圖 - 職涯導航</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="pageLoader" class="page-loader">
+    <div class="page-loader-inner">
+      <div class="page-loader-ring"></div>
+      <div class="page-loader-text">CAREER NAVIGATION</div>
+      <div class="page-loader-sub">載入中，請稍候…</div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="ce-nav">
+      <a href="index.html" class="ce-logo">職涯導航</a>
+      <div class="ce-nav-links">
+        <a href="index.html">迷惘</a>
+        <a href="next-steps.html" class="active">職涯準備地圖</a>
+        <a href="career-lab.html">性格測驗與職業庫</a>
+        <a href="career-maze.html">職涯迷宮遊戲</a>
+        <a href="interactive-solutions.html">互動練習</a>
+        <a href="references.html">參考資料</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="career-explore">
+    <header class="ce-header" id="stepsHeader">
+      <div class="ce-tag">行動指南</div>
+      <div class="ce-title-group">
+        <p class="ce-subtitle">從迷惘到行動</p>
+        <h1 class="ce-title">職涯準備地圖</h1>
+      </div>
+      <p class="ce-top-note">把大問題拆成小步驟，一次完成一點點，就能慢慢看見方向。</p>
+    </header>
+
+    <nav class="site-quick-nav">
+      <a class="site-quick-link" href="index.html">
+        <span class="site-quick-link-label">STEP 1</span>
+        <span class="site-quick-link-title">先認識自己的迷惘樣子</span>
+      </a>
+      <a class="site-quick-link" href="next-steps.html">
+        <span class="site-quick-link-label">STEP 2</span>
+        <span class="site-quick-link-title">跟著地圖一步步往前</span>
+      </a>
+      <a class="site-quick-link" href="career-lab.html">
+        <span class="site-quick-link-label">STEP 3</span>
+        <span class="site-quick-link-title">搭配測驗選擇職業方向</span>
+      </a>
+    </nav>
+
+    <section class="ce-layout">
+      <div class="ce-column" id="stepsColumnLeft">
+        <article class="ce-card ce-step-card" data-step="1">
+          <h3>Step 1｜認識自己</h3>
+          <p>回想過去讓你最有成就感、最投入的時刻，把這些情境寫下來。</p>
+          <button class="ce-step-btn" type="button">標記為完成</button>
+        </article>
+        <article class="ce-card ce-step-card" data-step="2">
+          <h3>Step 2｜盤點條件</h3>
+          <p>列出你現在的科目強項、可以利用的資源（社團、家人、人脈）。</p>
+          <button class="ce-step-btn" type="button">標記為完成</button>
+        </article>
+        <article class="ce-card ce-step-card" data-step="3">
+          <h3>Step 3｜畫出「不想要」清單</h3>
+          <p>先排除明顯不適合的環境與工作型態，幫自己縮小選項範圍。</p>
+          <button class="ce-step-btn" type="button">標記為完成</button>
+        </article>
+      </div>
+
+      <div class="ce-center">
+        <div class="ce-badge">小步開始就很好</div>
+        <div class="ce-avatar-wrapper">
+          <div class="ce-avatar-figure">
+            <div class="ce-avatar-hair"></div>
+            <div class="ce-avatar-face">
+              <div class="ce-avatar-eyes"></div>
+              <div class="ce-avatar-mouth"></div>
+            </div>
+            <div class="ce-avatar-body"></div>
+          </div>
+        </div>
+        <p class="ce-center-text">把職涯當成實驗，而不是一次就要答對的考題。</p>
+      </div>
+
+      <div class="ce-column" id="stepsColumnRight">
+        <article class="ce-card ce-card-right ce-step-card" data-step="4">
+          <h3>Step 4｜探索真實職業日常</h3>
+          <p>訪談身邊的學長姐或家人朋友，請他們分享一天的實際工作樣貌。</p>
+          <button class="ce-step-btn" type="button">標記為完成</button>
+        </article>
+        <article class="ce-card ce-card-right ce-step-card" data-step="5">
+          <h3>Step 5｜做小型體驗</h3>
+          <p>利用營隊、打工、專題、比賽等機會，先試試看某個領域是否真的喜歡。</p>
+          <button class="ce-step-btn" type="button">標記為完成</button>
+        </article>
+        <article class="ce-card ce-card-right ce-step-card" data-step="6">
+          <h3>Step 6｜定期檢視與調整</h3>
+          <p>每三到六個月回顧一次：我有哪裡變得更清楚？下一步想多試什麼？</p>
+          <button class="ce-step-btn" type="button">標記為完成</button>
+        </article>
+      </div>
+    </section>
+
+    <footer class="ce-footer">
+      <p>職涯沒有標準答案，只有一步步更接近自己的選擇。</p>
+      <a class="ce-primary-link" href="index.html">回到迷惘畫面 ←</a>
+    </footer>
+  </main>
+  <nav class="page-arrow-nav" aria-label="頁面切換">
+    <a class="page-arrow-link page-arrow-prev" href="index.html" aria-label="上一頁：迷惘">←</a>
+    <a class="page-arrow-link page-arrow-next" href="career-lab.html" aria-label="下一頁：性格測驗與職業推薦">→</a>
+  </nav>
+</body>
+</html>
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>職涯迷宮遊戲 - 職涯導航</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="pageLoader" class="page-loader">
+    <div class="page-loader-inner">
+      <div class="page-loader-ring"></div>
+      <div class="page-loader-text">CAREER NAVIGATION</div>
+      <div class="page-loader-sub">載入中，請稍候…</div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="ce-nav">
+      <a href="index.html" class="ce-logo">職涯導航</a>
+      <div class="ce-nav-links">
+        <a href="index.html">迷惘</a>
+        <a href="next-steps.html">職涯準備地圖</a>
+        <a href="career-lab.html">性格測驗與職業庫</a>
+        <a href="career-maze.html" class="active">職涯迷宮遊戲</a>
+        <a href="interactive-solutions.html">互動練習</a>
+        <a href="references.html">參考資料</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="career-explore career-maze">
+    <header class="ce-header">
+      <div class="ce-tag">小遊戲</div>
+      <div class="ce-title-group">
+        <p class="ce-subtitle">用路線選擇職涯</p>
+        <h1 class="ce-title">職涯迷宮：走出你的方向</h1>
+      </div>
+      <p class="ce-top-note">跟著直覺走，用一場小迷宮遊戲，看見你目前偏好的工作風格。</p>
+    </header>
+
+    <section class="maze-layout">
+      <div class="maze-panel">
+        <h2 class="lab-section-title">玩法說明</h2>
+        <p class="lab-intro">
+          使用鍵盤方向鍵，或點擊下方左右箭頭，移動圓球。每一個分岔代表一個選擇，最後你會走到三種不同出口之一，
+          對應三種不同的職涯傾向：<strong>創意探索</strong>、<strong>分析規劃</strong>、<strong>實作行動</strong>。
+        </p>
+        <ul class="maze-hints">
+          <li>如果卡住，可以按「重來」回到起點。</li>
+          <li>這不是測驗對錯，而是幫你觀察：你習慣往哪種路線走。</li>
+          <li>結束後，可以搭配「性格測驗與職業庫」頁面一起看。</li>
+        </ul>
+
+        <div class="maze-controls">
+          <div class="maze-controls-row">
+            <button type="button" class="maze-btn" id="mazeLeft">←</button>
+            <button type="button" class="maze-btn" id="mazeRight">→</button>
+          </div>
+          <button type="button" class="maze-reset" id="mazeReset">重來一次</button>
+          <p class="maze-tip">提示：← 表示「比較符合」，→ 表示「比較不符合」。也可以使用鍵盤方向鍵。</p>
+        </div>
+        <div id="mazeResult" class="maze-result">
+          一步步慢慢走，看看你自然會走到哪一種出口。
+        </div>
+      </div>
+
+      <div class="maze-panel">
+        <div id="mazeGrid" class="maze-grid" aria-label="職涯迷宮遊戲棋盤"></div>
+      </div>
+    </section>
+
+    <footer class="ce-footer">
+      <p>迷宮只是縮小版的人生選擇，真正重要的是你願不願意多走幾條路、試試不同的出口。</p>
+      <a class="ce-primary-link" href="career-lab.html">做完迷宮後，用測驗延伸探索 ➜</a>
+    </footer>
+  </main>
+  <nav class="page-arrow-nav" aria-label="頁面切換">
+    <a class="page-arrow-link page-arrow-prev" href="career-lab.html" aria-label="上一頁：性格測驗與職業推薦">←</a>
+    <a class="page-arrow-link page-arrow-next" href="interactive-solutions.html" aria-label="下一頁：互動練習">→</a>
+  </nav>
+</body>
+</html>
+

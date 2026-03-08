@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>性格測驗與職業推薦 - 職涯導航</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="pageLoader" class="page-loader">
+    <div class="page-loader-inner">
+      <div class="page-loader-ring"></div>
+      <div class="page-loader-text">CAREER NAVIGATION</div>
+      <div class="page-loader-sub">載入中，請稍候…</div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="ce-nav">
+      <a href="index.html" class="ce-logo">職涯導航</a>
+      <div class="ce-nav-links">
+        <a href="index.html">迷惘</a>
+        <a href="next-steps.html">職涯準備地圖</a>
+        <a href="career-lab.html" class="active">性格測驗與職業庫</a>
+        <a href="career-maze.html">職涯迷宮遊戲</a>
+        <a href="interactive-solutions.html">互動練習</a>
+        <a href="references.html">參考資料</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="career-explore career-lab">
+    <header class="ce-header">
+      <div class="ce-tag">互動測驗</div>
+      <div class="ce-title-group">
+        <p class="ce-subtitle">探索你的風格</p>
+        <h1 class="ce-title">性格測驗與職業推薦</h1>
+      </div>
+      <p class="ce-top-note">這不是正式心理測驗，而是一個幫你整理方向的小工具。</p>
+    </header>
+
+    <nav class="site-quick-nav">
+      <a class="site-quick-link" href="index.html">
+        <span class="site-quick-link-label">STEP 1</span>
+        <span class="site-quick-link-title">從情境認識職涯迷惘</span>
+      </a>
+      <a class="site-quick-link" href="next-steps.html">
+        <span class="site-quick-link-label">STEP 2</span>
+        <span class="site-quick-link-title">跟著地圖安排行動</span>
+      </a>
+      <a class="site-quick-link" href="career-lab.html">
+        <span class="site-quick-link-label">STEP 3</span>
+        <span class="site-quick-link-title">用測驗連結到職業庫</span>
+      </a>
+    </nav>
+
+    <section class="lab-layout">
+      <div class="lab-quiz">
+        <h2 class="lab-section-title">快速 MBTI 風格測驗（非正式）</h2>
+        <p class="lab-intro">
+          透過 8 個生活情境問題，我們會幫你整理出目前比較接近的 MBTI 風格，並搭配可能適合的職業方向。
+          真正的自己會隨著時間成長，請把這當成一份「當下的參考地圖」就好。
+        </p>
+
+        <form id="mbtiQuiz" class="quiz">
+          <div class="quiz-viewport">
+            <div class="quiz-question" data-index="0">
+              <h3>Q1｜聚會結束後，你通常怎麼充電？</h3>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="E" data-dimension="EI" />
+                  和朋友繼續聊天、約下一次活動，互動讓我恢復能量。
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="I" data-dimension="EI" />
+                  回家自己安靜一下，看影片或滑手機，需要一點獨處時間。
+                </label>
+              </div>
+            </div>
+
+            <div class="quiz-question" data-index="1">
+              <h3>Q2｜在新環境認識人時，你比較常…</h3>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="E" data-dimension="EI" />
+                  主動跟別人打招呼或搭話，很自然就聊起來。
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="I" data-dimension="EI" />
+                  先觀察一下氣氛，只和熟悉的人或主動來找我的人聊天。
+                </label>
+              </div>
+            </div>
+
+            <div class="quiz-question" data-index="2">
+              <h3>Q3｜老師交代一個新專題時，你先注意什麼？</h3>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q3" value="S" data-dimension="SN" />
+                  交件時間、規則、分數怎麼算，先搞清楚具體要求。
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q3" value="N" data-dimension="SN" />
+                  這個主題背後的意義、可以延伸成什麼有趣的方向。
+                </label>
+              </div>
+            </div>
+
+            <div class="quiz-question" data-index="3">
+              <h3>Q4｜看一部電影時，你比較容易記得什麼？</h3>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q4" value="S" data-dimension="SN" />
+                  劇情細節、畫面、角色說過的台詞，具體內容比較清楚。
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q4" value="N" data-dimension="SN" />
+                  這部片想表達的主題、寓意，還有我得到的啟發。
+                </label>
+              </div>
+            </div>
+
+            <div class="quiz-question" data-index="4">
+              <h3>Q5｜朋友在煩惱要不要轉系時，你比較會…</h3>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q5" value="T" data-dimension="TF" />
+                  幫他分析優缺點、未來出路，整理具體資料一起評估。
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q5" value="F" data-dimension="TF" />
+                  先關心他的感受，陪他說出壓力和擔心，再慢慢討論選擇。
+                </label>
+              </div>
+            </div>
+
+            <div class="quiz-question" data-index="5">
+              <h3>Q6｜與人意見不同時，你比較在意…</h3>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q6" value="T" data-dimension="TF" />
+                  最後哪個做法比較有效、比較合理。
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q6" value="F" data-dimension="TF" />
+                  對方會不會覺得受傷、被否定，關係會不會變差。
+                </label>
+              </div>
+            </div>
+
+            <div class="quiz-question" data-index="6">
+              <h3>Q7｜面對報告或作業，你通常的做法是？</h3>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q7" value="J" data-dimension="JP" />
+                  先規劃時間表，分段完成，比較不喜歡最後一刻爆衝。
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q7" value="P" data-dimension="JP" />
+                  先蒐集想法，靈感來了就動工，常常靠最後的專注衝刺完成。
+                </label>
+              </div>
+            </div>
+
+            <div class="quiz-question" data-index="7">
+              <h3>Q8｜安排假日時，你比較偏向哪一種？</h3>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q8" value="J" data-dimension="JP" />
+                  提前規劃好景點、時間與交通，照著行程走比較安心。
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q8" value="P" data-dimension="JP" />
+                  大概有幾個想去的地方就好，現場再看心情決定怎麼走。
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="quiz-nav">
+            <button type="button" class="quiz-nav-btn" id="quizPrev">← 上一題</button>
+            <span class="quiz-step-label" id="quizStepLabel">第 1 / 8 題</span>
+            <button type="button" class="quiz-nav-btn" id="quizNext">下一題 →</button>
+          </div>
+
+          <button type="button" id="quizSubmit" class="quiz-submit">生成我的 MBTI 風格與職業建議</button>
+          <p class="quiz-note">※ 僅作為自我探索的起點，不會被儲存或當成標籤。</p>
+        </form>
+      </div>
+
+      <aside class="lab-result" id="jobsResultPanel">
+        <h2 class="lab-section-title">測驗結果會出現在這裡</h2>
+        <p class="lab-intro">
+          完成上方四題後，我們會根據你的 MBTI 風格，推薦幾種可以優先探索的職業方向與工作型態。
+        </p>
+        <div id="quizResult" class="quiz-result"></div>
+      </aside>
+    </section>
+
+    <section class="lab-jobs-library">
+      <h2 class="lab-section-title">職業探索圖書館</h2>
+      <p class="lab-intro">
+        先逛逛各種職業，再回頭做測驗也可以。你可以依照領域快速瀏覽，或從測驗結果開始延伸。
+      </p>
+
+      <div class="jobs-filter">
+        <label>
+          依領域瀏覽：
+          <select id="jobsFilter">
+            <option value="all">全部領域</option>
+            <option value="tech">科技與工程</option>
+            <option value="data">數據與分析</option>
+            <option value="design">設計與創意</option>
+            <option value="business">商業與行銷</option>
+            <option value="education">教育與輔導</option>
+            <option value="health">醫療與照護</option>
+            <option value="public">公共服務與社會議題</option>
+            <option value="research">研究與學術</option>
+            <option value="service">服務與實務現場</option>
+            <option value="startup">創業與產品開發</option>
+            <option value="management">管理與領導</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="jobs-grid" id="jobsGrid">
+        <!-- 由 JavaScript 動態渲染職業卡片 -->
+      </div>
+    </section>
+
+    <footer class="ce-footer">
+      <p>測驗提供的是方向靈感，真正重要的是你親自去觀察、體驗與調整。</p>
+      <a class="ce-primary-link" href="index.html">回到情境一畫面 ←</a>
+    </footer>
+  </main>
+  <nav class="page-arrow-nav" aria-label="頁面切換">
+    <a class="page-arrow-link page-arrow-prev" href="next-steps.html" aria-label="上一頁：職涯準備地圖">←</a>
+    <a class="page-arrow-link page-arrow-next" href="career-maze.html" aria-label="下一頁：職涯迷宮遊戲">→</a>
+  </nav>
+</body>
+</html>
+
