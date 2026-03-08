@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>迷惘的十字路口 - 職涯導航</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google font similar to poster -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="pageLoader" class="page-loader">
+    <div class="page-loader-inner">
+      <div class="page-loader-ring"></div>
+      <div class="page-loader-text">CAREER NAVIGATION</div>
+      <div class="page-loader-sub">載入中，請稍候…</div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="ce-nav">
+      <a href="index.html" class="ce-logo">職涯導航</a>
+      <div class="ce-nav-links">
+        <a href="index.html" class="active">迷惘</a>
+        <a href="next-steps.html">職涯準備地圖</a>
+        <a href="career-lab.html">性格測驗與職業庫</a>
+        <a href="career-maze.html">職涯迷宮遊戲</a>
+        <a href="interactive-solutions.html">互動練習</a>
+        <a href="references.html">參考資料</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="career-explore">
+
+    <header class="ce-header">
+      <div class="ce-tag"></div>
+      <div class="ce-title-group">
+        <p class="ce-subtitle">剛開始規劃職涯的年輕人</p>
+        <h1 class="ce-title">迷惘的十字路口</h1>
+      </div>
+      <p class="ce-top-note">本網站主要面向 18–25 歲的你：對未來感到不安、卻還在尋找下一步方向，也沒有關係。</p>
+    </header>
+
+    <nav class="site-quick-nav">
+      <a class="site-quick-link" href="index.html">
+        <span class="site-quick-link-label">STEP 1</span>
+        <span class="site-quick-link-title">看見自己的職涯迷惘情境</span>
+      </a>
+      <a class="site-quick-link" href="next-steps.html">
+        <span class="site-quick-link-label">STEP 2</span>
+        <span class="site-quick-link-title">把迷惘拆成可行的小步驟</span>
+      </a>
+      <a class="site-quick-link" href="career-lab.html">
+        <span class="site-quick-link-label">STEP 3</span>
+        <span class="site-quick-link-title">用性格測驗發現可能職業</span>
+      </a>
+    </nav>
+
+    <section class="ce-layout">
+      <!-- Left column cards -->
+      <div class="ce-column ce-column-left">
+        <article class="ce-card">
+          <div class="ce-card-emoji">🔍</div>
+          <h3>「搞不清自己真正喜歡什麼」</h3>
+          <p>很多事情都還不錯，但一想到要做一輩子就猶豫不決。</p>
+        </article>
+
+        <article class="ce-card">
+          <div class="ce-card-emoji">📊</div>
+          <h3>「看不懂產業與職缺走向」</h3>
+          <p>聽說 AI、轉型、裁員很多，卻不知道哪些工作還有前景。</p>
+        </article>
+
+        <article class="ce-card">
+          <div class="ce-card-emoji">💬</div>
+          <h3>「家人期待和自己想像不同」</h3>
+          <p>想走的路和爸媽建議不一樣，卻又不知道怎麼溝通。</p>
+        </article>
+      </div>
+
+      <!-- Center character / challenge -->
+      <div class="ce-center">
+        <div class="ce-badge" id="challengeBadge">關鍵挑戰</div>
+
+        <div class="ce-avatar-wrapper">
+          <!-- If you want to use your image instead of illustration, swap the div for an <img> -->
+          <!-- <img src="assets/your-image.png" alt="思考職涯方向的年輕人" class="ce-avatar-img" /> -->
+          <div class="ce-avatar-figure">
+            <div class="ce-avatar-hair"></div>
+            <div class="ce-avatar-face">
+              <div class="ce-avatar-eyes"></div>
+              <div class="ce-avatar-mouth"></div>
+            </div>
+            <div class="ce-avatar-body"></div>
+          </div>
+        </div>
+
+        <p class="ce-center-text" id="challengeText">在不確定中，找出可以先踏出去的一小步。</p>
+
+        <div class="ce-mood">
+          <span class="ce-mood-label">現在的你比較接近哪一種心情？</span>
+          <div class="ce-mood-buttons">
+            <button class="ce-mood-btn" data-mood="lost">好迷惘，只想先撐過眼前就好</button>
+            <button class="ce-mood-btn" data-mood="curious">有點好奇，想多認識一些選項</button>
+            <button class="ce-mood-btn" data-mood="deciding">快要選擇了，很怕決定錯誤</button>
+          </div>
+          <p class="ce-mood-output" id="moodOutput">點一下，看看給你的提醒。</p>
+        </div>
+      </div>
+
+      <!-- Right column cards -->
+      <div class="ce-column ce-column-right">
+        <article class="ce-card ce-card-right">
+          <div class="ce-card-emoji">🎥</div>
+          <h3>「網路上的職業介紹太夢幻」</h3>
+          <p>影片、文章都很漂亮，卻很少有人分享真實的一天怎麼過。</p>
+        </article>
+
+        <article class="ce-card ce-card-right">
+          <div class="ce-card-emoji">🛤️</div>
+          <h3>「怕一個決定就影響一輩子」</h3>
+          <p>選科系、第一份工作都好關鍵，很怕走錯路就沒辦法回頭。</p>
+        </article>
+
+        <article class="ce-card ce-card-right">
+          <div class="ce-card-emoji">🗺️</div>
+          <h3>「不知道現在可以先做什麼」</h3>
+          <p>缺乏清楚的準備路線圖，只好一直等到「以後再說」。</p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="ce-footer">
+      <p>你不需要一次看清全部，只要先看見下一步就夠了。</p>
+      <a class="ce-primary-link" href="next-steps.html">前往職涯準備地圖 ➜</a>
+    </footer>
+  </main>
+  <nav class="page-arrow-nav" aria-label="頁面切換">
+    <a class="page-arrow-link page-arrow-next" href="next-steps.html" aria-label="下一頁：職涯準備地圖">→</a>
+  </nav>
+</body>
+</html>
