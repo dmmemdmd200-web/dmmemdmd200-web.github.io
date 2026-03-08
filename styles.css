@@ -1435,53 +1435,149 @@ body.career-chat-open .page-arrow-nav {
   }
 
   .ce-nav {
-    padding-inline: 14px;
+    padding: 10px 14px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ce-nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .ce-nav-links a {
+    font-size: 13px;
+    padding: 6px 10px;
   }
 
   .career-explore {
-    padding: 22px 18px 20px;
+    padding: 22px 14px 20px;
   }
 
   .ce-layout {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .ce-column-left,
   .ce-column-right {
     order: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
   }
 
   .ce-center {
     order: 0;
+    margin-bottom: 20px;
   }
 
   .ce-avatar-wrapper {
-    width: 190px;
-    height: 190px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .site-quick-nav {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .site-quick-link {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  .site-quick-link-label {
+    margin-bottom: 0;
+    min-width: 50px;
   }
 }
 
 @media (max-width: 600px) {
   .ce-header {
-    grid-template-columns: 1fr;
-    row-gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .ce-title-group {
+    text-align: center;
   }
 
   .ce-top-note {
-    justify-self: flex-start;
+    font-size: 14px;
+    padding: 10px 16px;
+    text-align: center;
   }
 
   .ce-title {
-    font-size: 24px;
+    font-size: 26px;
+    letter-spacing: 0.1em;
   }
 
   .ce-nav-links {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .ce-nav-links::-webkit-scrollbar {
     display: none;
   }
 
+  .ce-nav-links a {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
   .page-arrow-nav {
-    inset-block: auto 16px;
-    inset-inline: 12px;
+    inset-block: auto 20px;
+    inset-inline: 16px;
+    width: calc(100% - 32px);
     transform: none;
+  }
+
+  .page-arrow-link {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+
+  .ce-card {
+    padding: 16px;
+  }
+
+  .ce-center-text {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .ce-mood-btn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  /* Adjust chat for mobile */
+  .chat-overlay-panel {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+
+  .chat-toggle-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
   }
 }
